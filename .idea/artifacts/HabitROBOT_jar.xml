@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HabitROBOT:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HabitROBOT_jar</output-path>
+    <root id="archive" name="HabitROBOT.jar">
+      <element id="module-output" name="HabitROBOT" />
+    </root>
+  </artifact>
+</component>
