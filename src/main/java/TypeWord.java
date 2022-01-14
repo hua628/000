@@ -8,7 +8,7 @@ public class TypeWord {
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        robot.delay(50);
+        robot.delay(200);
         int ascii;
         for(int i = 0; i < text.length(); i++) {
             ascii = (int)text.charAt(i);
