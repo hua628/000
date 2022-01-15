@@ -7,11 +7,11 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class Main {
-    static int globalMS=3000,pressMS = 700;
+    static int globalMS=2800,pressMS = 1200;
     public static void main(String[] args) throws IOException, InterruptedException, AWTException {
         int XaxisPreFix=0,YaxisPreFix=30;
 //        String Name = "洪祥瑞",Email = "jeff87218@gmail.com",Phone = "0983162068",CreditCard = "1234 5678 1234 5678",CreditCardName="HuangXiangRui",SafeCode="123",ExpireDay="1010",Seven11="喜樹";
-        String CreditCard = "9876 5432 9876 5432",CreditCardName="LINJIAHUA",SafeCode="802",ExpireDay="1223",Seven11="海利";
+        String CreditCard = "5408 0589 0258 7026",CreditCardName="LINJIAHUA",SafeCode="802",ExpireDay="1226",Seven11="海利";
 
         int globalMS=3000,pressMS = 900;
 //        String url = "https://www.habitselect.com/products/tightbooth-loop-boa-hat-2-colors";
@@ -59,91 +59,78 @@ public class Main {
 //        robot.mouseMove(840+XaxisPreFix,878+YaxisPreFix);
 //        writeTextBox.write(robot,Phone);
 
-        robot.mouseWheel(1);
-        robot.delay(100);
-        robot.mouseWheel(-1);
-        robot.delay(100);
-        robot.mouseMove(990+XaxisPreFix,631);
+
+        robot.mouseMove(990,631);
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.delay(pressMS);
         //-------------------門市選擇------------------
 
-        robot.mouseMove(1496+XaxisPreFix,883+YaxisPreFix); //進入門市頁面
+        robot.mouseMove(1290,920); //進入門市頁面
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.delay(globalMS);
 
-        robot.mouseMove(1154+XaxisPreFix,104+YaxisPreFix);//門市名稱搜尋
+        robot.mouseMove(1160,140);//門市名稱搜尋
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.delay(pressMS);
 
-        robot.mouseMove(524+XaxisPreFix,262+YaxisPreFix);//搜尋框
+        robot.mouseMove(530,280);//搜尋框
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         writeTextBox.write(robot,Seven11);
 
-        robot.mouseMove(678+XaxisPreFix,262+YaxisPreFix);//搜尋
+        robot.mouseMove(680,285);//搜尋
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.delay(pressMS);
 
-        robot.mouseMove(803+XaxisPreFix,262+YaxisPreFix);//選擇門市
+        robot.mouseMove(920,295);//選擇門市
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.delay(pressMS);
 
-        robot.mouseMove(945+XaxisPreFix,359+YaxisPreFix);//門市確認
+        robot.mouseMove(950,385);//門市確認
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.delay(pressMS);
 
-        robot.mouseMove(1204+XaxisPreFix,422+YaxisPreFix);//同意
+        robot.mouseMove(1265,460);//同意
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.delay(pressMS);
 
-        robot.mouseMove(994+XaxisPreFix,430+YaxisPreFix);//確認
+        robot.mouseMove(995,460);//確認
         robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
         robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
         robot.delay(globalMS*2);
-        robot.mouseWheel(-5);
-        robot.delay(700);
 
-
-        //-------------------信用卡------------------
 
         robot.mouseWheel(3);
-        robot.delay(500);
+        robot.delay(1000);
+//-------------------信用卡------------------
+
+        robot.mouseMove(1240,330);
+        writeTextBox.write(robot,CreditCard);//卡號
+        robot.delay(350);
+
+        robot.mouseMove(1240,375);
+        writeTextBox.write(robot,CreditCardName);//卡片名字
+        robot.delay(350);
 
 
-        robot.mouseMove(1487,804);
-        robot.mouseMove(1487-10,804);
-        robot.delay(500);
-        writeTextBox.write(robot,CreditCardName);
-        robot.delay(500);
+        robot.mouseMove(1100,440);
+        TypeWord.type (robot,ExpireDay);//效期
+        robot.delay(350);
 
-        robot.mouseMove(1538,880);
-        robot.delay(300);
-        writeTextBox.write(robot,SafeCode);
+        robot.mouseMove(1430,430);
+        writeTextBox.write(robot,SafeCode);//安全碼
+        robot.delay(350);
 
-
-        robot.mouseMove(1228,858);
-        TypeWord.type(robot,ExpireDay);
-
-        robot.mouseMove(1492,750);
-        TypeWord.type(robot,CreditCard);
-
-        robot.mouseWheel(9);
-        robot.delay(150);
-        robot.mouseMove(987,835);
-        robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-        robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        robot.mouseMove(1353+XaxisPreFix,883+YaxisPreFix);
     }
 }
