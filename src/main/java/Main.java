@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException, AWTException {
         int XaxisPreFix=0,YaxisPreFix=30;
 //        String Name = "洪祥瑞",Email = "jeff87218@gmail.com",Phone = "0983162068",CreditCard = "1234 5678 1234 5678",CreditCardName="HuangXiangRui",SafeCode="123",ExpireDay="1010",Seven11="喜樹";
-        String CreditCard = "5408 0589 0258 7026",CreditCardName="LINJIAHUA",SafeCode="802",ExpireDay="1226",Seven11="海利";
+        String CreditCard = "1234 5678 9123 4567",CreditCardName="LINJIAHUA",SafeCode="802",ExpireDay="1226",Seven11="海利";
 
         int globalMS=3000,pressMS = 900;
 //        String url = "https://www.habitselect.com/products/tightbooth-loop-boa-hat-2-colors";
